@@ -24,7 +24,7 @@ void AShooterCharacter::BeginPlay()
 void AShooterCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	  
 }
 
 // Called to bind functionality to input
@@ -40,12 +40,12 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 void AShooterCharacter::MoveForward(float AxisValue)
 {
-	AddMovementInput(GetActorForwardVector() * AxisValue * UGameplayStatics::GetWorldDeltaSeconds(this) * MoveSpeed);
+	AddMovementInput(GetActorForwardVector() * AxisValue * MoveSpeed);
 }
 
 void AShooterCharacter::MoveRight(float AxisValue)
 {
-	AddMovementInput(GetActorRightVector() * AxisValue * UGameplayStatics::GetWorldDeltaSeconds(this) * MoveSpeed);
+	AddMovementInput(GetActorRightVector() * AxisValue * MoveSpeed);
 }
 
 void AShooterCharacter::LookUp(float AxisValue)
